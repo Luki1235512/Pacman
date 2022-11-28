@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Create files">
-      <change afterPath="$PROJECT_DIR$/assets/animations.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/ghost.png" afterDir="false" />
+    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Add assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669626572969</updated>
-      <workItem from="1669626574460" duration="1114000" />
+      <workItem from="1669626574460" duration="2914000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1669626605106</created>
@@ -78,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669627121430</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add assets">
+      <created>1669627718385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669627718385</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Create files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create files" />
+    <MESSAGE value="Add assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add assets" />
   </component>
 </project>
