@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Drew walls">
+    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Finish walls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/pacman.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669626572969</updated>
-      <workItem from="1669626574460" duration="4681000" />
+      <workItem from="1669626574460" duration="6781000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1669626605106</created>
@@ -91,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669631176240</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finish walls">
+      <created>1669633030476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669633030476</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +120,7 @@
     <MESSAGE value="Create files" />
     <MESSAGE value="Add assets" />
     <MESSAGE value="Drew walls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Drew walls" />
+    <MESSAGE value="Finish walls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish walls" />
   </component>
 </project>

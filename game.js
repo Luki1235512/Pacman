@@ -17,6 +17,11 @@ let wallSpaceWidth = oneBlockSize / 1.5;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
 let wallInnerColor = "black";
 
+const DIRECTION_RIGHT = 4;
+const DIRECTION_UP = 3;
+const DIRECTION_LEFT = 2;
+const DIRECTION_BOTTOM = 1;
+
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -49,13 +54,13 @@ let gameLoop = () => {
 };
 
 let update = () => {
-    // TODO:
+    pacman.moveProcess();
 };
 
 let draw = () => {
     createRect(0 , 0, canvas.width, canvas.height, "black");
-    // TODO:
     drawWalls();
+    pacman.draw()
 };
 
 let gameInterval = setInterval(gameLoop, 1000 / fps);
@@ -108,3 +113,10 @@ let drawWalls = () => {
         }
     }
 };
+
+let createNewPacman = () => {
+    pacman = new Pacman(oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize / 2);
+};
+
+createNewPacman();
+gameLoop();
