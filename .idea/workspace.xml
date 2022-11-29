@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Add pacman">
+    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Add event listener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/pacman.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669626572969</updated>
       <workItem from="1669626574460" duration="7073000" />
-      <workItem from="1669715249283" duration="2883000" />
+      <workItem from="1669715249283" duration="4163000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1669626605106</created>
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669635920880</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add event listener">
+      <created>1669718582413</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669718582414</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +136,7 @@
     <MESSAGE value="Drew walls" />
     <MESSAGE value="Finish walls" />
     <MESSAGE value="Add pacman" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pacman" />
+    <MESSAGE value="Add event listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add event listener" />
   </component>
 </project>
