@@ -22,17 +22,20 @@ let score = 0;
 
 let ghosts = [];
 let ghostCount = 4;
-let ghostLocations = [
-    {x: 0, y: 0},
-    {x: 176, y: 0},
-    {x: 0, y: 121},
-    {x: 176, y: 121},
-]
 
 const DIRECTION_RIGHT = 4;
 const DIRECTION_UP = 3;
 const DIRECTION_LEFT = 2;
 const DIRECTION_DOWN = 1;
+
+let ghostLocations = [
+    {x: 0, y: 0},
+    {x: 176, y: 0},
+    {x: 0, y: 121},
+    {x: 176, y: 121},
+];
+
+
 
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -60,6 +63,13 @@ let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
+let randomTargetsForGhosts = [
+    {x: 1 * oneBlockSize, y: 1 * oneBlockSize},
+    {x: 1 * oneBlockSize, y: (map.length - 2) * oneBlockSize},
+    {x: (map[0].length - 2) * oneBlockSize, y: oneBlockSize},
+    {x: (map[0].length - 2) * oneBlockSize, y: (map.length - 2) * oneBlockSize},
+];
+
 let gameLoop = () => {
     update()
     draw()
@@ -68,6 +78,9 @@ let gameLoop = () => {
 let update = () => {
     pacman.moveProcess();
     pacman.eat();
+    for (let i = 0; i < ghosts.length; i++) {
+        ghosts[i].moveProcess();
+    }
 };
 
 let drawFoods = () => {
