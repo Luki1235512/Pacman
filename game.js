@@ -13,14 +13,14 @@ let fps = 30;
 let oneBlockSize = 20;
 
 let wallColor = "#342DCA";
-let wallSpaceWidth = oneBlockSize / 1.5;
+let wallSpaceWidth = oneBlockSize / 1.6;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
 let wallInnerColor = "black";
 
 const DIRECTION_RIGHT = 4;
 const DIRECTION_UP = 3;
 const DIRECTION_LEFT = 2;
-const DIRECTION_BOTTOM = 1;
+const DIRECTION_DOWN = 1;
 
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -115,8 +115,27 @@ let drawWalls = () => {
 };
 
 let createNewPacman = () => {
-    pacman = new Pacman(oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize / 2);
+    pacman = new Pacman(oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize, oneBlockSize / 5);
 };
 
 createNewPacman();
 gameLoop();
+
+window.addEventListener("keydown", (event) => {
+    let k = event.code
+    setTimeout(() => {
+
+        if (k === "KeyA" || k === "ArrowLeft") { // LEFT
+            pacman.nextDirection = DIRECTION_LEFT
+        }
+        else if (k === "KeyW" || k === "ArrowUp") { // UP
+            pacman.nextDirection = DIRECTION_UP
+        }
+        else if (k === "KeyD" || k === "ArrowRight") { // RIGHT
+            pacman.nextDirection = DIRECTION_RIGHT
+        }
+        else if (k === "KeyS" || k === "ArrowDown") { // DOWN
+            pacman.nextDirection = DIRECTION_DOWN
+        }
+    }, 1)
+})

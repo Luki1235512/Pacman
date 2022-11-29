@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Finish walls">
+    <list default="true" id="226d3eeb-e5dc-40a8-9cc6-3240dfa21564" name="Changes" comment="Add pacman">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/pacman.js" afterDir="false" />
@@ -32,15 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Rzeczy/JavaScript/machine-learning/mobilenet-image-classification"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Rzeczy/JavaScript/machine-learning/mobilenet-image-classification&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Rzeczy\JavaScript\pacman\assets" />
@@ -54,7 +54,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669626572969</updated>
-      <workItem from="1669626574460" duration="6781000" />
+      <workItem from="1669626574460" duration="7073000" />
+      <workItem from="1669715249283" duration="2883000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1669626605106</created>
@@ -98,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669633030476</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add pacman">
+      <created>1669635920880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669635920880</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +129,7 @@
     <MESSAGE value="Add assets" />
     <MESSAGE value="Drew walls" />
     <MESSAGE value="Finish walls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish walls" />
+    <MESSAGE value="Add pacman" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pacman" />
   </component>
 </project>

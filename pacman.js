@@ -8,6 +8,7 @@ class Pacman {
         this.speed = speed;
 
         this.direction = DIRECTION_RIGHT;
+        this.nextDirection = this.direction;
 
         this.currentFrame = 1;
         this.frameCount = 7;
@@ -41,7 +42,7 @@ class Pacman {
             case DIRECTION_LEFT:
                 this.x += this.speed;
                 break;
-            case DIRECTION_BOTTOM:
+            case DIRECTION_DOWN:
                 this.y -= this.speed;
                 break;
         }
@@ -58,7 +59,7 @@ class Pacman {
             case DIRECTION_LEFT:
                 this.x -= this.speed;
                 break;
-            case DIRECTION_BOTTOM:
+            case DIRECTION_DOWN:
                 this.y += this.speed;
                 break;
         }
@@ -81,7 +82,19 @@ class Pacman {
     }
 
     changeDirectionIfPossible() {
-
+        if (this.direction === this.nextDirection) {
+            return;
+        }
+        let tempDirection = this.direction;
+        this.direction = this.nextDirection;
+        this.moveForwards();
+        if (this.checkCollision()) {
+            this.moveBackwards();
+            this.direction = tempDirection;
+        }
+        else {
+            this.moveBackwards();
+        }
     }
 
     changeAnimation() {
@@ -96,7 +109,7 @@ class Pacman {
         canvasContext.translate(-this.x - oneBlockSize / 2, -this.y - oneBlockSize / 2);
 
         canvasContext.drawImage(
-            pacmanFrames, (this.currentFrame - 1) / oneBlockSize,
+            pacmanFrames, (this.currentFrame - 1) * oneBlockSize,
             0,
             oneBlockSize,
             oneBlockSize,
