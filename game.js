@@ -36,8 +36,6 @@ let ghostLocations = [
     {x: 176, y: 121},
 ];
 
-
-
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -105,7 +103,20 @@ let gameOver = () => {
 let drawLives = () => {
     canvasContext.font = "20px Emulogic";
     canvasContext.fillStyle = "white";
-    canvasContext.fillText("Lives: ", 200, oneBlockSize * (map.length + 1));
+    canvasContext.fillText("Lives: ", 220, oneBlockSize * (map.length + 1) + 10);
+    for (let i = 0; i < lives; i++) {
+        canvasContext.drawImage(
+            pacmanFrames,
+            2 * oneBlockSize,
+            0,
+            oneBlockSize,
+            oneBlockSize,
+            350 + i * oneBlockSize,
+            oneBlockSize * map.length + 10,
+            oneBlockSize,
+            oneBlockSize
+        );
+    }
 }
 
 let drawFoods = () => {
@@ -142,6 +153,7 @@ let draw = () => {
     pacman.draw()
     drawScore();
     drawGhosts();
+    drawLives();
 };
 
 let gameInterval = setInterval(gameLoop, 1000 / fps);
