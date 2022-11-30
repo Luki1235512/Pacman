@@ -22,6 +22,7 @@ let score = 0;
 
 let ghosts = [];
 let ghostCount = 4;
+let lives = 3;
 
 const DIRECTION_RIGHT = 4;
 const DIRECTION_UP = 3;
@@ -78,10 +79,34 @@ let gameLoop = () => {
 let update = () => {
     pacman.moveProcess();
     pacman.eat();
+
     for (let i = 0; i < ghosts.length; i++) {
         ghosts[i].moveProcess();
     }
+
+    if (pacman.checkGhostCollision()) {
+        restartGame();
+    }
 };
+
+let restartGame = () => {
+    createNewPacman();
+    createGhosts();
+    lives--;
+    if (lives === 0) {
+        gameOver();
+    }
+};
+
+let gameOver = () => {
+    clearInterval(gameInterval);
+};
+
+let drawLives = () => {
+    canvasContext.font = "20px Emulogic";
+    canvasContext.fillStyle = "white";
+    canvasContext.fillText("Lives: ", 200, oneBlockSize * (map.length + 1));
+}
 
 let drawFoods = () => {
     for (let i = 0; i < map.length; i++) {
