@@ -9,19 +9,21 @@ let createRect = (x, y, width, height, color) => {
     canvasContext.fillRect(x, y, width, height);
 };
 
-let fps = 30;
-let oneBlockSize = 20;
+const fps = 30;
+const oneBlockSize = 20;
+let DEBUG = false;
 
-let wallColor = "#342DCA";
-let wallSpaceWidth = oneBlockSize / 1.6;
-let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
-let wallInnerColor = "black";
+const wallColor = "#342DCA";
+const wallSpaceWidth = oneBlockSize / 1.6;
+const wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
+const wallInnerColor = "black";
 
-let foodColor = "#FEB897";
+const foodColor = "#FEB897";
 let score = 0;
 
+let pacman = null;
 let ghosts = [];
-let ghostCount = 4;
+const ghostCount = 4;
 let lives = 3;
 let foodCount = 0;
 
@@ -37,7 +39,7 @@ let ghostLocations = [
     {x: 176, y: 121},
 ];
 
-let map = [
+const map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
     [1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1],
@@ -48,7 +50,7 @@ let map = [
     [1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1],
     [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
     [1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2],
+    [1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],
     [1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1],
     [0, 0, 0, 0, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 0, 0, 0, 0],
@@ -72,8 +74,8 @@ for (let i = 0; i < map.length; i++) {
 }
 
 let randomTargetsForGhosts = [
-    {x: 1 * oneBlockSize, y: 1 * oneBlockSize},
-    {x: 1 * oneBlockSize, y: (map.length - 2) * oneBlockSize},
+    {x: oneBlockSize, y: oneBlockSize},
+    {x: oneBlockSize, y: (map.length - 2) * oneBlockSize},
     {x: (map[0].length - 2) * oneBlockSize, y: oneBlockSize},
     {x: (map[0].length - 2) * oneBlockSize, y: (map.length - 2) * oneBlockSize},
 ];

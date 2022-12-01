@@ -101,13 +101,10 @@ class Ghost {
     }
 
     isInRangeOfPacman() {
-        let xDistance = Math.abs(pacman.getMapX() - this.getMapX());
-        let yDistance = Math.abs(pacman.getMapY() - this.getMapY());
+        const xDistance = Math.abs(pacman.getMapX() - this.getMapX());
+        const yDistance = Math.abs(pacman.getMapY() - this.getMapY());
 
-        if (Math.sqrt(xDistance * xDistance + yDistance * yDistance) <= this.range) {
-            return true;
-        }
-        return false;
+        return Math.sqrt(xDistance * xDistance + yDistance * yDistance) <= this.range;
     }
 
     changeDirectionIfPossible() {
@@ -147,13 +144,13 @@ class Ghost {
         }]
 
         while (queue.length > 0) {
-            let popped = queue.shift();
+            const popped = queue.shift();
             if (popped.x === destX && popped.y === destY) {
                 return popped.moves[0];
             }
             else {
                 mp[popped.y][popped.x] = 1;
-                let neighborList = this.addNeighbor(popped, mp);
+                const neighborList = this.addNeighbor(popped, mp);
                 for (let i = 0; i < neighborList.length; i++) {
                     queue.push(neighborList[i]);
                 }
@@ -165,8 +162,7 @@ class Ghost {
 
     addNeighbor(popped, mp) {
         let queue = [];
-        let numOfRows = mp.length;
-        let numOfColumns = mp[0].length;
+        const numOfRows = mp.length;
 
         if (
             popped.x - 1 >= 0
@@ -211,10 +207,6 @@ class Ghost {
         return queue;
     }
 
-    changeAnimation() {
-        this.currentFrame = this.currentFrame === this.frameCount ? 1 : this.currentFrame + 1;
-    }
-
     draw() {
         canvasContext.save();
 
@@ -232,16 +224,18 @@ class Ghost {
 
         canvasContext.restore();
 
-        canvasContext.beginPath();
-        canvasContext.strokeStyle = "red";
-        canvasContext.arc(
-            this.x + oneBlockSize / 2,
-            this.y + oneBlockSize / 2,
-            this.range * oneBlockSize,
-            0,
-            2 * Math.PI
+        if (DEBUG) {
+            canvasContext.beginPath();
+            canvasContext.strokeStyle = "red";
+            canvasContext.arc(
+                this.x + oneBlockSize / 2,
+                this.y + oneBlockSize / 2,
+                this.range * oneBlockSize,
+                0,
+                2 * Math.PI
             );
-        canvasContext.stroke();
+            canvasContext.stroke();
+        }
     }
 
     getMapX() {
@@ -251,13 +245,4 @@ class Ghost {
     getMapY() {
         return parseInt(this.y / oneBlockSize);
     }
-
-    getMapXRightSide() {
-        return parseInt((this.x + 0.9999 * oneBlockSize) / oneBlockSize);
-    }
-
-    getMapYRightSide() {
-        return parseInt((this.y + 0.9999 * oneBlockSize) / oneBlockSize);
-    }
-
 }
