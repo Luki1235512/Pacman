@@ -97,6 +97,7 @@ let update = () => {
 
     if (score >= foodCount) {
         drawWin();
+        clearInterval(gameInterval);
     }
 };
 
@@ -119,6 +120,13 @@ let drawGameOver = () => {
     canvasContext.fillStyle = "white";
     canvasContext.fillText("Game Over!", 150, 200);
 };
+
+let drawWin = () => {
+    canvasContext.font = "20px Emulogic";
+    canvasContext.fillStyle = "white";
+    canvasContext.fillText("You Won!", 150, 200);
+};
+
 
 let drawLives = () => {
     canvasContext.font = "20px Emulogic";
